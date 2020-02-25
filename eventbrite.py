@@ -142,8 +142,8 @@ class EventbriteLoader:
         """ Runs the data load process """
         last_load_date = self.database.last_event_load_date()
         if last_load_date:
-            one_day_ago = datetime.datetime.now() - datetime.timedelta(days=1)
-            first_event = min(one_day_ago, last_load_date)
+            30_days_ago = datetime.datetime.now() - datetime.timedelta(days=30)
+            first_event = min(30_days_ago, last_load_date)
             start = str(first_event)[:10]
             print('Loading events starting at %s'%(start))
         else:
