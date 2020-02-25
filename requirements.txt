@@ -1,0 +1,5 @@
+arrow
+daiquiri
+pandas
+psycopg2
+requests
